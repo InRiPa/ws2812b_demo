@@ -1,0 +1,243 @@
+{
+    "version": 1,
+    "author": "Uri Shaked",
+    "editor": "wokwi",
+    "parts": [
+        {
+            "type": "wokwi-pi-pico",
+            "id": "pico",
+            "top": 91.15,
+            "left": 51.8,
+            "rotate": 180,
+            "attrs": {
+                "builder": "pico-sdk"
+            }
+        },
+        {
+            "type": "wokwi-neopixel",
+            "id": "rgb1",
+            "top": -109.1,
+            "left": -250.6,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-led-ring",
+            "id": "ring8",
+            "top": -66.66,
+            "left": -281.23,
+            "rotate": 270,
+            "attrs": {
+                "pixels": "8"
+            }
+        },
+        {
+            "type": "wokwi-led-ring",
+            "id": "ring12",
+            "top": 45.67,
+            "left": -296.19,
+            "rotate": 270,
+            "attrs": {
+                "pixels": "12"
+            }
+        },
+        {
+            "type": "wokwi-led-ring",
+            "id": "ring16",
+            "top": 187.31,
+            "left": -320.26,
+            "rotate": 270,
+            "attrs": {
+                "pixels": "16"
+            }
+        },
+        {
+            "type": "wokwi-led-ring",
+            "id": "ring24",
+            "top": 346.11,
+            "left": -349.27,
+            "rotate": 270,
+            "attrs": {
+                "pixels": "24"
+            }
+        },
+        {
+            "type": "wokwi-vcc",
+            "id": "vcc1",
+            "top": -200.84,
+            "left": -153.6,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-gnd",
+            "id": "gnd1",
+            "top": 489.6,
+            "left": -87,
+            "attrs": {}
+        },
+        {
+            "type": "wokwi-resistor",
+            "id": "r1",
+            "top": 301.55,
+            "left": -48,
+            "attrs": {
+                "value": "470"
+            }
+        }
+    ],
+    "connections": [
+        [
+            "pico:GND.1",
+            "gnd1:GND",
+            "black",
+            [
+                "h28.8",
+                "v163.2"
+            ]
+        ],
+        [
+            "ring24:GND",
+            "gnd1:GND",
+            "black",
+            [
+                "h57.68",
+                "v-29.14"
+            ]
+        ],
+        [
+            "ring16:GND",
+            "gnd1:GND",
+            "black",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "ring12:GND",
+            "gnd1:GND",
+            "black",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "ring8:GND",
+            "gnd1:GND",
+            "black",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "gnd1:GND",
+            "rgb1:VSS",
+            "black",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "vcc1:VCC",
+            "rgb1:VDD",
+            "red",
+            [
+                "v19.2",
+                "h-115.2"
+            ]
+        ],
+        [
+            "ring8:VCC",
+            "vcc1:VCC",
+            "red",
+            [
+                "h48"
+            ]
+        ],
+        [
+            "ring12:VCC",
+            "vcc1:VCC",
+            "red",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "ring16:VCC",
+            "vcc1:VCC",
+            "red",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "ring24:VCC",
+            "vcc1:VCC",
+            "red",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "pico:GP22",
+            "r1:2",
+            "yellow",
+            [
+                "h0"
+            ]
+        ],
+        [
+            "r1:1",
+            "ring24:DIN",
+            "yellow",
+            [
+                "v0"
+            ]
+        ],
+        [
+            "ring24:DOUT",
+            "ring16:DIN",
+            "green",
+            [
+                "h28.88",
+                "v-173.14"
+            ]
+        ],
+        [
+            "ring16:DOUT",
+            "ring12:DIN",
+            "green",
+            [
+                "h48",
+                "v-144"
+            ]
+        ],
+        [
+            "ring12:DOUT",
+            "ring8:DIN",
+            "green",
+            [
+                "h48",
+                "v-76.79"
+            ]
+        ],
+        [
+            "ring8:DOUT",
+            "rgb1:DIN",
+            "green",
+            [
+                "h57.6",
+                "v-76.79"
+            ]
+        ],
+        [
+            "vcc1:VCC",
+            "pico:VSYS",
+            "red",
+            [
+                "v19.2",
+                "h134.4",
+                "v211.2"
+            ]
+        ]
+    ],
+    "dependencies": {}
+}

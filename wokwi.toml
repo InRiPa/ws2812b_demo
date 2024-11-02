@@ -1,0 +1,16 @@
+[wokwi]
+version = 1
+gdbServerPort = 3333
+elf = "build/pio_ws2812_parallel.elf"
+firmware = "build/pio_ws2812_parallel.uf2"
+
+
+[ws2812]
+elf = "build/test.elf"
+firmware = "build/test.uf2"
+[ws2812_parallel]
+elf = "build/pio_ws2812_parallel.elf"
+firmware = "build/pio_ws2812_parallel.uf2"
+[ws2812_pio]
+elf = "build/pio_ws2812.elf"
+firmware = "build/pio_ws2812.uf2"
