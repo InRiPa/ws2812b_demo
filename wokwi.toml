@@ -1,8 +1,8 @@
 [wokwi]
 version = 1
 gdbServerPort = 3333
-elf = "build/pio_ws2812_parallel.elf"
-firmware = "build/pio_ws2812_parallel.uf2"
+elf = "build/simple.elf"
+firmware = "build/simple.uf2"
 
 
 [ws2812]
@@ -14,3 +14,6 @@ firmware = "build/pio_ws2812_parallel.uf2"
 [ws2812_pio]
 elf = "build/pio_ws2812.elf"
 firmware = "build/pio_ws2812.uf2"
+[chatgpt]
+elf = "build/simple.elf"
+firmware = "build/simple.uf2"
