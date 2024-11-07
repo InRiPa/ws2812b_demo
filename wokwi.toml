@@ -1,8 +1,8 @@
 [wokwi]
 version = 1
 gdbServerPort = 3333
-elf = "build/simple.elf"
-firmware = "build/simple.uf2"
+elf = "build/hutscape.elf"
+firmware = "build/hutscape.uf2"
 
 
 [ws2812]
@@ -17,3 +17,6 @@ firmware = "build/pio_ws2812.uf2"
 [chatgpt]
 elf = "build/simple.elf"
 firmware = "build/simple.uf2"
+[hutscape]
+elf = "build/hutscape.elf"
+firmware = "build/hutscape.uf2"
