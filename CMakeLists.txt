@@ -16,6 +16,7 @@ pico_generate_pio_header(simple ${CMAKE_CURRENT_LIST_DIR}/ws2812.pio OUTPUT_DIR 
 # Link necessary libraries
 target_link_libraries(simple PRIVATE pico_stdlib hardware_pio)
 
+
 # Add extra outputs (e.g., .uf2 file)
 pico_add_extra_outputs(simple)
 
